@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body class="text-select">
+		<div class="drag-region invisible"></div>
+		<div class="login invisible">
+			<button class="button back-button invisible back-to-main-button">◀</button>
+			<br/>
+			<img src="assets/logo_text.png" class="launcher-title" height=64/>
+			<br/>
+			<h1 class="title">Log In</h1>
+			<br/>
+			<br/>
+			<div class="login-box">
+				<button class="button login-button microsoft-login-button">Microsoft Account</button>
+				<br/>
+				<button class="button login-button mojang-login-button">Mojang Account</button>
+			</div>
+		</div>
+		<div class="mojang-login invisible">
+			<button class="button back-button back-to-login-button">◀</button>
+			<br/>
+			<br/>
+			<h1 class="title">Log In</h1>
+			<br/>
+			<br/>
+			<div class="login-box">
+				<label for="username" class="label">Mojang Account (Email)</label>
+				<input id="username" class="input" type="username" spellcheck="false" autocomplete="off"/>
+				<label for="password" class="label">Password</label>
+				<input id="password" class="input" type="password"/>
+				<br/>
+			</div>
+			<span class="error-message"></span>
+			<button class="button play-button login-button-mojang">Log In</button>
+		</div>
+		<div class="main invisible">
+			<img src="assets/logo_text.png" class="launcher-title" height=64/>
+			<button class="button account-button"></button>
+			<div class="accounts invisible">
+			</div>
+			<div class="tabs">
+				<button class="about-tab selected-tab">Home</button>
+				<div class="sep"></div>
+				<button class="settings-tab">Settings</button>
+				<div class="sep"></div>
+				<button class="news-tab">News</button>
+			</div>
+			<br/>
+			<div class="about">
+				<div class="about-text">
+					<p>Bruh Client is designed to bruh every other client.</p>
+					<br/>
+					<a class="open-in-browser" href="https://discord.cryingcorner.xyz/">Discord Server</a>
+				</div>
+				<div class="discord-widget">
+					<iframe src="https://discord.com/widget?id=952438137332858931&theme=dark" width="275" height="395" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+				</div>
+				<br/>
+				<div class="quick-join-box">
+					<h3 class="centred-text quick-join-text">Play Server</h3>
+					<div class="quick-servers centred">No Added Servers</div>
+				</div>
+			</div>
+			<div class="settings invisible">
+				<br/>
+				<div class="centred">
+					<input type="checkbox" class="optifine"/>
+					<label for="optifine" style="cursor: pointer;"  class="spaced-5">Install OptiFine</label>
+				</div>
+				<br/>
+				<div class="centred">
+					<input type="checkbox" class="auto-update"/>
+					<label for="auto-update" style="cursor: pointer;"  class="spaced-5">Automatic Updates</label>
+				</div>
+				<br/>
+				<br/>
+				<div class="memory-box">
+					<p>Memory</p>
+					<input type="range" class="memory">
+					<p class="memory-label"></p>
+				</div>
+				<br/>
+				<br/>
+				<div>
+					<span class="centred">Minecraft Folder</span>
+					<br/>
+					<span class="centred spaced-15 minecraft-folder-path"></span>
+					<br/>
+					<button class="centred button button-generic minecraft-folder spaced-15">Change</button>
+				</div>
+				<br/>
+				<br/>
+				<h2 class="centred">Advanced</h2>
+				<span class="centred">JRE Location</span>
+				<br/>
+				<span class="centred spaced-15 jre-location"></span>
+				<br/>
+				<div class="centred">
+					<button class="button button-generic jre-location-change">Change</button>
+					<button class="button button-generic jre-location-reset spaced-15">Reset</button>
+				</div>
+				<br/>
+				<p class="centred">JVM Arguments</p>
+				<input type="text" class="centred input jvm-arguments" placeholder="No additional args"/>
+				<br/>
+				<br/>
+				<div class="centred">
+					<button class="button button-generic devtools">Open DevTools</button>
+				</div>
+				<br/>
+			</div>
+			<div class="news invisible">
+				<p>Loading news...</p>
+			</div>
+			<div class="button-box">
+				<button class="button play-button" id="launch-button">Play</button>
+			</div>
+			<p class="invisible" id="launch-note"></p>
+		</div>
+		<script>
+    		require('./menu.js')
+  		</script>
+	</body>
+</html>
